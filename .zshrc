@@ -84,7 +84,7 @@ export TERM=xterm-256color
 [ -z "$TMUX" ] && exec tmux
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+source ~/.zsh-plugins/zsh-history-substring-search.zsh
 
 # Setup zsh-autosuggestions
 source ~/.zsh-autosuggestions/autosuggestions.zsh
