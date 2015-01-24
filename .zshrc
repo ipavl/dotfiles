@@ -99,3 +99,6 @@ zle -N zle-line-init
 # use ctrl+t to toggle autosuggestions(hopefully this wont be needed as
 # zsh-autosuggestions is designed to be unobtrusive)
 bindkey '^T' autosuggest-toggle
+
+# Powerline
+. /usr/share/zsh/site-contrib/powerline.zsh
