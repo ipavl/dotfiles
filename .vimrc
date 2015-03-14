@@ -204,32 +204,36 @@ colo molokai
 "autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " FILE BROWSER STARTUP
-func OpenFileWindow()
- :20vs
- :Explore
- wincmd p
-endfunc
+"func OpenFileWindow()
+" :20vs
+" :Explore
+" wincmd p
+"endfunc
 
-func CloseIfLast()
-  if exists("b:completePath") " this is how I determine that I'm in an explorer window
-  let n = winnr()
-  wincmd p
-  if n == winnr()
-  quit " quit the window
-  endif
-  wincmd p
-  endif
-endfunc
+"func CloseIfLast()
+"  if exists("b:completePath") " this is how I determine that I'm in an explorer window
+"  let n = winnr()
+"  wincmd p
+"  if n == winnr()
+"  quit " quit the window
+"  endif
+"  wincmd p
+"  endif
+"endfunc
 
-if has("autocmd")
-  if !exists("rudyautocommands")
-  let rudyautocommands = 1
-  autocmd VimEnter * call OpenFileWindow()
-  autocmd WinEnter * call CloseIfLast()
-  endif
-endif
+"if has("autocmd")
+"  if !exists("rudyautocommands")
+"  let rudyautocommands = 1
+"  autocmd VimEnter * call OpenFileWindow()
+"  autocmd WinEnter * call CloseIfLast()
+"  endif
+"endif
 
 " Powerline
-set laststatus=2
-set showtabline=2
-set noshowmode
+"set laststatus=2
+"set showtabline=2
+"set noshowmode
+
+" Airline
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'murmur'

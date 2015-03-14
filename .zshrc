@@ -101,4 +101,4 @@ zle -N zle-line-init
 bindkey '^T' autosuggest-toggle
 
 # Powerline
-. /usr/share/zsh/site-contrib/powerline.zsh
+#. /usr/share/zsh/site-contrib/powerline.zsh
