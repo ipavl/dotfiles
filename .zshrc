@@ -45,11 +45,11 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git tmux zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring-search)
 
 # User configuration
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/opt/depot-tools-git:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl"
+# export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/opt/depot-tools-git:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -82,23 +82,6 @@ source $ZSH/oh-my-zsh.sh
 # Start tmux with support for 256 colors
 export TERM=xterm-256color
 [ -z "$TMUX" ] && exec tmux
-
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/.zsh-plugins/zsh-history-substring-search.zsh
-
-# Setup zsh-autosuggestions
-source ~/.zsh-autosuggestions/autosuggestions.zsh
-
-# Enable autosuggestions automatically
-zle-line-init() {
-    zle autosuggest-start
-}
-
-zle -N zle-line-init
-
-# use ctrl+t to toggle autosuggestions(hopefully this wont be needed as
-# zsh-autosuggestions is designed to be unobtrusive)
-bindkey '^T' autosuggest-toggle
 
 # Powerline
 #. /usr/share/zsh/site-contrib/powerline.zsh
