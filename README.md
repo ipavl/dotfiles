@@ -18,6 +18,6 @@ Dependencies
 Usage
 =====
 
-* Copy the files from the `dotfiles` directory to your home directory
 * Run `git submodule init && git submodule update`
+* Copy the files from the `dotfiles` directory to your home directory
 
